@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=2" name="viewport"/>
+    <title>Todo</title>
+    <link rel="stylesheet" href="todo.css"/>
+</head>
+<body>
+    <section id="main">
+        <header class="header">
+            <div id="title">
+                <h1>todos</h1>
+            </div>
+            <div id="userInput">
+                <input id="toggle-all" type="checkbox"/>
+                <input id="new-todo" type="text" placeholder="What needs to be done?" autofocus>
+            </div>
+            <ul id="todo-list"></ul>
+        </header>
+    </section>
+    <div id="footer">    
+        <ul id="filterList">
+            <li id="all">all</li>
+            <li id="active">active</li>
+            <li id="completed">completed</li>
+        </ul>
+    <div>
+    <div id="leftItems"></div>
+    </div>
+    <button id="clear-completed">Clear completed</button>
+    </div>
+    <script src="zepto.js"></script>
+    <script src="model.js"></script>
+    <script src="localStorage.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>

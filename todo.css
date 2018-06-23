@@ -1,0 +1,228 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    animation-duration: 0.5s;
+}
+
+body{
+    background-color: #f0f0f0;
+    display:flex;
+    flex-direction: column;
+}
+
+#title{
+    text-align: center;
+}
+
+#title h1{
+    color: rgba(175, 47, 47, 0.15);
+    font-size: 54pt;
+    font-weight: bold;
+}
+
+#list{
+    margin: 10px auto;
+    width: 95%;
+    text-align: center;
+    font-size: 0px;
+}
+
+#todo-list{
+    min-height: 368px;
+    max-height: 368px;
+    overflow-y: auto;
+    border: 1px solid rgba(175, 47, 47, 0.15);
+    background-color: #f9f9f9;
+    width: 90%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+#new-todo{
+    height: 60px;
+    margin: auto;
+    font-size: x-large;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 13vw;
+    padding-right: 0px;
+    opacity: 0.5;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(175, 47, 47, 0.15);
+}
+
+.todo{
+    font-size: larger;
+    padding: 2px 2px;
+    opacity: 0.5;
+    width: 100%;
+}
+
+#toggle-all{
+    position: absolute;
+    background-color: rgba(175, 47, 47, 0.15);
+    border: hidden;
+    left: 8%;
+    width: 5%;
+    z-index: 99;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.listItem{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    height: 46px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 16pt;
+    border-bottom: 1px solid rgba(175, 47, 47, 0.15);
+    background-color: #f9f9f9;
+    z-index: 99;
+}
+
+.listItem p{
+    display: inline-block;
+    margin-left: 5%;
+    cursor: pointer;
+    width: 75%;
+}
+
+.done{
+    display: inline-block;
+    border: 2px solid black;
+    opacity: 0.2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-left: 2%;
+    background-color: transparent;
+}
+
+.isdone{
+    background-color: rgba(175, 47, 47, 0.5);
+}
+
+.Done{
+    position: static;
+    text-decoration: line-through;
+    color: grey;
+}
+
+.none{
+    display: none;
+}
+
+#filterList{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+    font-size: 0pt;
+    display: block;
+}
+
+li{
+    color: #f4f4f4;
+    display: inline-block;
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 29vw;
+    height: 5vh;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: rgba(175, 47, 47, 0.15);
+}
+li#all,li#active{
+    border-right:1vw #f4f4f4 solid;
+}
+.select{
+    opacity: 1;
+    color: rgba(175, 47, 47, 0.15);
+    background-color: #f4f4f4;
+}
+
+#clear-completed{
+    color: #f4f4f4;
+    visibility: hidden;
+    border: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3vh;
+    height: 5vh;
+    width: 30vh;
+    font-weight: bold;
+    background-color: rgba(204, 83, 13, 0.13);
+    opacity: 1;
+}
+
+#leftItems{
+    color: rgba(175, 47, 47, 0.75);
+    font-size: 16pt;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#userInput{
+    position: relative;
+    width:90vw;
+    margin:auto;
+}
+
+/* 使用@keyframes 定义动画效果 */
+@keyframes in{
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+        z-index: 99;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+        z-index: 99;
+    }
+}
+
+@keyframes leftOut{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes rightOut{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+#main{
+    flex:1;
+}
+#footer{
+    text-align: center;
+    width: 90vw;
+    margin:auto;
+}
+#todoItems{
+    display: inline;
+}
+
+
